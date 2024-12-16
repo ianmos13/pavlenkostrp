@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "index_banner_sliders",
+  "info": {
+    "singularName": "index-banner-slider",
+    "pluralName": "index-banner-sliders",
+    "displayName": "Главная баннер (слайдер)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "background": {
+      "type": "string"
+    },
+    "headerData": {
+      "type": "json"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "body": {
+      "type": "text"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    }
+  }
+}
