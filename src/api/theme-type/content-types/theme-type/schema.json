@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "theme_types",
+  "info": {
+    "singularName": "theme-type",
+    "pluralName": "theme-types",
+    "displayName": "Баннер тема (слайдер)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

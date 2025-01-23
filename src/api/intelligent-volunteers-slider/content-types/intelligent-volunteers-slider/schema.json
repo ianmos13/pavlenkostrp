@@ -25,6 +25,9 @@
     },
     "text": {
       "type": "blocks"
+    },
+    "rank": {
+      "type": "integer"
     }
   }
 }

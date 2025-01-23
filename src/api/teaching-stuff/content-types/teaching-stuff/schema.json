@@ -4,7 +4,8 @@
   "info": {
     "singularName": "teaching-stuff",
     "pluralName": "teaching-stuffs",
-    "displayName": "Преподавательский состав"
+    "displayName": "Преподавательский состав",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,24 +22,26 @@
       "type": "string"
     },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "city": {
       "type": "string"
@@ -47,6 +50,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::teaching-stuff-categorie.teaching-stuff-categorie"
+    },
+    "rank": {
+      "type": "integer"
     }
   }
 }

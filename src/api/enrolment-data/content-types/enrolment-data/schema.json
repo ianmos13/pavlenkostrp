@@ -45,6 +45,9 @@
     },
     "description": {
       "type": "string"
+    },
+    "rank": {
+      "type": "integer"
     }
   }
 }

@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "background": {
-      "type": "string"
-    },
     "headerData": {
       "type": "json"
     },
@@ -37,6 +34,17 @@
     },
     "buttonLink": {
       "type": "string"
+    },
+    "cardsData": {
+      "type": "json"
+    },
+    "theme": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::theme-type.theme-type"
+    },
+    "rank": {
+      "type": "integer"
     }
   }
 }
