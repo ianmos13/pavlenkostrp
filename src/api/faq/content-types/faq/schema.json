@@ -15,13 +15,13 @@
     "question": {
       "type": "string"
     },
-    "answer": {
-      "type": "text"
-    },
     "category": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::faq-category.faq-category"
+    },
+    "answer": {
+      "type": "blocks"
     }
   }
 }

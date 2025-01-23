@@ -4,7 +4,8 @@
   "info": {
     "singularName": "program-category",
     "pluralName": "program-categories",
-    "displayName": "Содержание программы (категории)"
+    "displayName": "Содержание программы (категории)",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,9 @@
   "attributes": {
     "category": {
       "type": "string"
+    },
+    "rank": {
+      "type": "integer"
     }
   }
 }
