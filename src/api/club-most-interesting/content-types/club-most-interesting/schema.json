@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "club_most_interestings",
+  "info": {
+    "singularName": "club-most-interesting",
+    "pluralName": "club-most-interestings",
+    "displayName": "4SurgeonsClub Самое интересное (слайдер)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "string",
+      "required": true
+    },
+    "header": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "rank": {
+      "type": "integer"
+    }
+  }
+}
