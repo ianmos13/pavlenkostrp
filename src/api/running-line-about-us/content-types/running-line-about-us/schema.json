@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "running_line_about_uses",
+  "info": {
+    "singularName": "running-line-about-us",
+    "pluralName": "running-line-about-uses",
+    "displayName": "Бегущая строка на странице \"О проекте\"",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}
