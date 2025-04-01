@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "running_line_become_residents",
+  "info": {
+    "singularName": "running-line-become-resident",
+    "pluralName": "running-line-become-residents",
+    "displayName": "Бегущая строка на странице \"Стать резидентом\"",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}

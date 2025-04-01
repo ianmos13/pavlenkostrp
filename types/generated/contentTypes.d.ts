@@ -1117,6 +1117,7 @@ export interface ApiProgramProgram extends Struct.CollectionTypeSchema {
     >;
     description: Schema.Attribute.Text;
     rank: Schema.Attribute.Integer;
+    answer: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1256,6 +1257,93 @@ export interface ApiPublicationsBannerSliderPublicationsBannerSlider
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::publications-banner-slider.publications-banner-slider'
+    >;
+  };
+}
+
+export interface ApiRunningLineAboutUsRunningLineAboutUs
+  extends Struct.SingleTypeSchema {
+  collectionName: 'running_line_about_uses';
+  info: {
+    singularName: 'running-line-about-us';
+    pluralName: 'running-line-about-uses';
+    displayName: '\u0411\u0435\u0433\u0443\u0449\u0430\u044F \u0441\u0442\u0440\u043E\u043A\u0430 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435 "\u041E \u043F\u0440\u043E\u0435\u043A\u0442\u0435"';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    data: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::running-line-about-us.running-line-about-us'
+    >;
+  };
+}
+
+export interface ApiRunningLineBecomeResidentRunningLineBecomeResident
+  extends Struct.SingleTypeSchema {
+  collectionName: 'running_line_become_residents';
+  info: {
+    singularName: 'running-line-become-resident';
+    pluralName: 'running-line-become-residents';
+    displayName: '\u0411\u0435\u0433\u0443\u0449\u0430\u044F \u0441\u0442\u0440\u043E\u043A\u0430 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435 "\u0421\u0442\u0430\u0442\u044C \u0440\u0435\u0437\u0438\u0434\u0435\u043D\u0442\u043E\u043C"';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    data: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::running-line-become-resident.running-line-become-resident'
+    >;
+  };
+}
+
+export interface ApiRunningLineIndexRunningLineIndex
+  extends Struct.SingleTypeSchema {
+  collectionName: 'running_lines_index';
+  info: {
+    singularName: 'running-line-index';
+    pluralName: 'running-lines-index';
+    displayName: '\u0411\u0435\u0433\u0443\u0449\u0430\u044F \u0441\u0442\u0440\u043E\u043A\u0430 \u043D\u0430 \u0433\u043B\u0430\u0432\u043D\u043E\u0439 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    linesData: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::running-line-index.running-line-index'
     >;
   };
 }
@@ -1944,6 +2032,9 @@ declare module '@strapi/strapi' {
       'api::publication.publication': ApiPublicationPublication;
       'api::publication-categorie.publication-categorie': ApiPublicationCategoriePublicationCategorie;
       'api::publications-banner-slider.publications-banner-slider': ApiPublicationsBannerSliderPublicationsBannerSlider;
+      'api::running-line-about-us.running-line-about-us': ApiRunningLineAboutUsRunningLineAboutUs;
+      'api::running-line-become-resident.running-line-become-resident': ApiRunningLineBecomeResidentRunningLineBecomeResident;
+      'api::running-line-index.running-line-index': ApiRunningLineIndexRunningLineIndex;
       'api::school-team.school-team': ApiSchoolTeamSchoolTeam;
       'api::school-team-categorie.school-team-categorie': ApiSchoolTeamCategorieSchoolTeamCategorie;
       'api::teaching-staff-teacher-slider.teaching-staff-teacher-slider': ApiTeachingStaffTeacherSliderTeachingStaffTeacherSlider;

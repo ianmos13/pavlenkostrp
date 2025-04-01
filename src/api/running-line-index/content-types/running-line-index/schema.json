@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "running_lines_index",
+  "info": {
+    "singularName": "running-line-index",
+    "pluralName": "running-lines-index",
+    "displayName": "Бегущая строка на главной странице",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "linesData": {
+      "type": "json"
+    }
+  }
+}
