@@ -25,6 +25,9 @@
     },
     "rank": {
       "type": "integer"
+    },
+    "answer": {
+      "type": "blocks"
     }
   }
 }
