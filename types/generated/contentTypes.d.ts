@@ -1400,6 +1400,10 @@ export interface ApiSchoolTeamCategorieSchoolTeamCategorie
   attributes: {
     category: Schema.Attribute.String;
     rank: Schema.Attribute.Integer;
+    subcategory: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::school-team-categorie.school-team-categorie'
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

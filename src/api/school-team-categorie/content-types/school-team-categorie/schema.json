@@ -17,6 +17,11 @@
     },
     "rank": {
       "type": "integer"
+    },
+    "subcategory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::school-team-categorie.school-team-categorie"
     }
   }
 }
