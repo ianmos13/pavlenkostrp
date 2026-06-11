@@ -912,6 +912,8 @@ export interface ApiIndexBannerSliderIndexBannerSlider
     cardsData: Schema.Attribute.JSON;
     theme: Schema.Attribute.Relation<'oneToOne', 'api::theme-type.theme-type'>;
     rank: Schema.Attribute.Integer;
+    listData: Schema.Attribute.JSON;
+    imageOverview: Schema.Attribute.Boolean;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

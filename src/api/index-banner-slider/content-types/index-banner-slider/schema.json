@@ -45,6 +45,12 @@
     },
     "rank": {
       "type": "integer"
+    },
+    "listData": {
+      "type": "json"
+    },
+    "imageOverview": {
+      "type": "boolean"
     }
   }
 }
