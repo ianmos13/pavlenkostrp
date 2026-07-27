@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fundraising_goals",
+  "info": {
+    "singularName": "fundraising-goal",
+    "pluralName": "fundraising-goals",
+    "displayName": "Сборы Цели",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "rank": {
+      "type": "integer"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "primary": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fundraising_important_expenses",
+  "info": {
+    "singularName": "fundraising-important-expense",
+    "pluralName": "fundraising-important-expenses",
+    "displayName": "Сборы Важные затраты",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "moneyAmount": {
+      "type": "string"
+    },
+    "rank": {
+      "type": "integer"
+    }
+  }
+}

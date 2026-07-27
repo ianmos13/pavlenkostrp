@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fundraising_donations",
+  "info": {
+    "singularName": "fundraising-donation",
+    "pluralName": "fundraising-donations",
+    "displayName": "Сборы Транзакции",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "transactionId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "fundraisingSlug": {
+      "type": "string",
+      "required": true
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "email": {
+      "type": "string"
+    },
+    "fundraisingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "completed",
+        "refunded"
+      ]
+    },
+    "invoiceId": {
+      "type": "string"
+    },
+    "paidAt": {
+      "type": "datetime"
+    },
+    "rawPayload": {
+      "type": "json"
+    }
+  }
+}

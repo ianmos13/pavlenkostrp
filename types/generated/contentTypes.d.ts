@@ -891,6 +891,149 @@ export interface ApiFeedbackDataFeedbackData
   };
 }
 
+export interface ApiFundraisingDonationFundraisingDonation
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fundraising_donations';
+  info: {
+    singularName: 'fundraising-donation';
+    pluralName: 'fundraising-donations';
+    displayName: '\u0421\u0431\u043E\u0440\u044B \u0422\u0440\u0430\u043D\u0437\u0430\u043A\u0446\u0438\u0438';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    transactionId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    fundraisingSlug: Schema.Attribute.String & Schema.Attribute.Required;
+    amount: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    email: Schema.Attribute.String;
+    fundraisingStatus: Schema.Attribute.Enumeration<['completed', 'refunded']>;
+    invoiceId: Schema.Attribute.String;
+    paidAt: Schema.Attribute.DateTime;
+    rawPayload: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fundraising-donation.fundraising-donation'
+    >;
+  };
+}
+
+export interface ApiFundraisingGoalFundraisingGoal
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fundraising_goals';
+  info: {
+    singularName: 'fundraising-goal';
+    pluralName: 'fundraising-goals';
+    displayName: '\u0421\u0431\u043E\u0440\u044B \u0426\u0435\u043B\u0438';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    rank: Schema.Attribute.Integer;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    primary: Schema.Attribute.Boolean;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fundraising-goal.fundraising-goal'
+    >;
+  };
+}
+
+export interface ApiFundraisingImportantExpenseFundraisingImportantExpense
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fundraising_important_expenses';
+  info: {
+    singularName: 'fundraising-important-expense';
+    pluralName: 'fundraising-important-expenses';
+    displayName: '\u0421\u0431\u043E\u0440\u044B \u0412\u0430\u0436\u043D\u044B\u0435 \u0437\u0430\u0442\u0440\u0430\u0442\u044B';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    moneyAmount: Schema.Attribute.String;
+    rank: Schema.Attribute.Integer;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fundraising-important-expense.fundraising-important-expense'
+    >;
+  };
+}
+
+export interface ApiFundraisingItemFundraisingItem
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fundraising_items';
+  info: {
+    singularName: 'fundraising-item';
+    pluralName: 'fundraising-items';
+    displayName: '\u0421\u0431\u043E\u0440\u044B';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    organizerName: Schema.Attribute.String & Schema.Attribute.Required;
+    organizerEmail: Schema.Attribute.String & Schema.Attribute.Required;
+    organizerPhone: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    goal: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
+    fundraisingEnd: Schema.Attribute.Date;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    completeModeration: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    collectedValue: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
+    peopleCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    fixedValue: Schema.Attribute.Decimal;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fundraising-item.fundraising-item'
+    >;
+  };
+}
+
 export interface ApiIndexBannerSliderIndexBannerSlider
   extends Struct.CollectionTypeSchema {
   collectionName: 'index_banner_sliders';
@@ -2027,6 +2170,10 @@ declare module '@strapi/strapi' {
       'api::faq.faq': ApiFaqFaq;
       'api::faq-category.faq-category': ApiFaqCategoryFaqCategory;
       'api::feedback-data.feedback-data': ApiFeedbackDataFeedbackData;
+      'api::fundraising-donation.fundraising-donation': ApiFundraisingDonationFundraisingDonation;
+      'api::fundraising-goal.fundraising-goal': ApiFundraisingGoalFundraisingGoal;
+      'api::fundraising-important-expense.fundraising-important-expense': ApiFundraisingImportantExpenseFundraisingImportantExpense;
+      'api::fundraising-item.fundraising-item': ApiFundraisingItemFundraisingItem;
       'api::index-banner-slider.index-banner-slider': ApiIndexBannerSliderIndexBannerSlider;
       'api::intelligent-volunteers-slider.intelligent-volunteers-slider': ApiIntelligentVolunteersSliderIntelligentVolunteersSlider;
       'api::mentor.mentor': ApiMentorMentor;
