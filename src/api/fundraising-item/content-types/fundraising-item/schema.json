@@ -58,6 +58,10 @@
     },
     "fixedValue": {
       "type": "decimal"
+    },
+    "moderationEmailSent": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

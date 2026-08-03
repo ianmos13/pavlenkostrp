@@ -1019,6 +1019,8 @@ export interface ApiFundraisingItemFundraisingItem
     collectedValue: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
     peopleCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     fixedValue: Schema.Attribute.Decimal;
+    moderationEmailSent: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
